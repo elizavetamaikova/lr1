@@ -147,9 +147,6 @@
 		<Unit filename="/home/lizer/Documents/labs cpp/lab-01-parser/sources/Student.cpp">
 			<Option target="parser"/>
 		</Unit>
-		<Unit filename="/home/lizer/Documents/labs cpp/lab-01-parser/sources/source.cpp">
-			<Option target="parser"/>
-		</Unit>
 		<Unit filename="/home/lizer/Documents/labs cpp/lab-01-parser/tests/test.cpp">
 			<Option target="tests"/>
 		</Unit>

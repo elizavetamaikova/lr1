@@ -194,33 +194,6 @@ sources/Student.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parser.dir/build.make CMakeFiles/parser.dir/sources/Student.cpp.s
 .PHONY : sources/Student.cpp.s
 
-sources/source.o: sources/source.cpp.o
-
-.PHONY : sources/source.o
-
-# target to build an object file
-sources/source.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parser.dir/build.make CMakeFiles/parser.dir/sources/source.cpp.o
-.PHONY : sources/source.cpp.o
-
-sources/source.i: sources/source.cpp.i
-
-.PHONY : sources/source.i
-
-# target to preprocess a source file
-sources/source.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parser.dir/build.make CMakeFiles/parser.dir/sources/source.cpp.i
-.PHONY : sources/source.cpp.i
-
-sources/source.s: sources/source.cpp.s
-
-.PHONY : sources/source.s
-
-# target to generate assembly for a file
-sources/source.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parser.dir/build.make CMakeFiles/parser.dir/sources/source.cpp.s
-.PHONY : sources/source.cpp.s
-
 tests/test.o: tests/test.cpp.o
 
 .PHONY : tests/test.o
@@ -262,9 +235,6 @@ help:
 	@echo "... sources/Student.o"
 	@echo "... sources/Student.i"
 	@echo "... sources/Student.s"
-	@echo "... sources/source.o"
-	@echo "... sources/source.i"
-	@echo "... sources/source.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"

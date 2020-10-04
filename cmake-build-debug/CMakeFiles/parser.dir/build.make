@@ -77,22 +77,9 @@ include CMakeFiles/parser.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/parser.dir/flags.make
 
-CMakeFiles/parser.dir/sources/source.cpp.o: CMakeFiles/parser.dir/flags.make
-CMakeFiles/parser.dir/sources/source.cpp.o: ../sources/source.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/parser.dir/sources/source.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser.dir/sources/source.cpp.o -c "/home/lizer/Documents/labs cpp/lab-01-parser/sources/source.cpp"
-
-CMakeFiles/parser.dir/sources/source.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parser.dir/sources/source.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/lizer/Documents/labs cpp/lab-01-parser/sources/source.cpp" > CMakeFiles/parser.dir/sources/source.cpp.i
-
-CMakeFiles/parser.dir/sources/source.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parser.dir/sources/source.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/lizer/Documents/labs cpp/lab-01-parser/sources/source.cpp" -o CMakeFiles/parser.dir/sources/source.cpp.s
-
 CMakeFiles/parser.dir/sources/Student.cpp.o: CMakeFiles/parser.dir/flags.make
 CMakeFiles/parser.dir/sources/Student.cpp.o: ../sources/Student.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/parser.dir/sources/Student.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/parser.dir/sources/Student.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser.dir/sources/Student.cpp.o -c "/home/lizer/Documents/labs cpp/lab-01-parser/sources/Student.cpp"
 
 CMakeFiles/parser.dir/sources/Student.cpp.i: cmake_force
@@ -105,17 +92,15 @@ CMakeFiles/parser.dir/sources/Student.cpp.s: cmake_force
 
 # Object files for target parser
 parser_OBJECTS = \
-"CMakeFiles/parser.dir/sources/source.cpp.o" \
 "CMakeFiles/parser.dir/sources/Student.cpp.o"
 
 # External object files for target parser
 parser_EXTERNAL_OBJECTS =
 
-libparserd.a: CMakeFiles/parser.dir/sources/source.cpp.o
 libparserd.a: CMakeFiles/parser.dir/sources/Student.cpp.o
 libparserd.a: CMakeFiles/parser.dir/build.make
 libparserd.a: CMakeFiles/parser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libparserd.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libparserd.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/parser.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/parser.dir/link.txt --verbose=$(VERBOSE)
 
