@@ -1,0 +1,5 @@
+/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/parser.dir
+/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/test.dir
+/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/tests.dir
+/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/edit_cache.dir

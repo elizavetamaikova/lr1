@@ -1,0 +1,10 @@
+/snap/clion/126/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/lizer/Documents/labs cpp/lab-01-parser"
+-- [hunter] Calculating Toolchain-SHA1
+-- [hunter] Calculating Config-SHA1
+-- [hunter] HUNTER_ROOT: /home/lizer/.hunter
+-- [hunter] [ Hunter-ID: 9a3594a | Toolchain-ID: 2c824f9 | Config-ID: 48401e9 ]
+-- [hunter] GTEST_ROOT: /home/lizer/.hunter/_Base/9a3594a/2c824f9/48401e9/Install (ver.: 1.8.0-hunter-p11)
+-- [hunter] NLOHMANN_JSON_ROOT: /home/lizer/.hunter/_Base/9a3594a/2c824f9/48401e9/Install (ver.: 3.6.1)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug
