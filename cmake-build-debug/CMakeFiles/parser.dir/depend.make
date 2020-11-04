@@ -6,6 +6,3 @@ CMakeFiles/parser.dir/sources/Student.cpp.o: ../include/serializer.hpp
 CMakeFiles/parser.dir/sources/Student.cpp.o: /home/lizer/.hunter/_Base/9a3594a/2c824f9/48401e9/Install/include/nlohmann/json.hpp
 CMakeFiles/parser.dir/sources/Student.cpp.o: ../sources/Student.cpp
 
-CMakeFiles/parser.dir/sources/source.cpp.o: ../include/header.hpp
-CMakeFiles/parser.dir/sources/source.cpp.o: ../sources/source.cpp
-

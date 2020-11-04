@@ -54,10 +54,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/126/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/129/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/126/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -99,9 +99,9 @@ tests_EXTERNAL_OBJECTS =
 
 tests: CMakeFiles/tests.dir/tests/test.cpp.o
 tests: CMakeFiles/tests.dir/build.make
-tests: /home/lizer/.hunter/_Base/9a3594a/2c824f9/48401e9/Install/lib/libgtest_maind.a
+tests: /home/lizer/.hunter/_Base/9a3594a/252be92/48401e9/Install/lib/libgtest_maind.a
 tests: libparserd.a
-tests: /home/lizer/.hunter/_Base/9a3594a/2c824f9/48401e9/Install/lib/libgtestd.a
+tests: /home/lizer/.hunter/_Base/9a3594a/252be92/48401e9/Install/lib/libgtestd.a
 tests: CMakeFiles/tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)

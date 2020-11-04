@@ -6,5 +6,5 @@ CXX_FLAGS =  -pedantic -Werror -Wall -Wextra -Wno-unused-command-line-argument -
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/lizer/Documents/labs cpp/lab-01-parser/include" -isystem /home/lizer/.hunter/_Base/9a3594a/2c824f9/48401e9/Install/include 
+CXX_INCLUDES = -I"/home/lizer/Documents/labs cpp/lab-01-parser/include" -isystem /home/lizer/.hunter/_Base/9a3594a/252be92/48401e9/Install/include 
 

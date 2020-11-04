@@ -111,7 +111,7 @@ Predefined macroses:
 #define __GCC_IEC_559_COMPLEX 2
 #define __GLIBCXX_BITSIZE_INT_N_0 128
 #define __GLIBCXX_TYPE_INT_N_0 __int128
-#define __GLIBCXX__ 20200408
+#define __GLIBCXX__ 20200808
 #define __GLIBC__ 2
 #define __GNUC_MINOR__ 3
 #define __GNUC_PATCHLEVEL__ 0
