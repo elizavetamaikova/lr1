@@ -1,3 +1,4 @@
+// Copyright 2020 elizavetamaikova
 #include "Student.hpp"
 
 void Student::print_hor(){
@@ -36,7 +37,6 @@ Student::~Student() {
 }
 
 void Student::from_json(const json& j, student_inf& st) {
-
   get_name(j.at("name"), st);
   get_group(j.at("group"), st);
   get_avg(j.at("avg"), st);
@@ -106,7 +106,7 @@ uint32_t Student::get_avg_length(const student_inf& st){
 }
 
 uint32_t Student::get_debt_length(const student_inf& st){
-  if(st.debt.size() == 1 && st.debt[0].type() == typeid(std::nullptr_t))
+  if (st.debt.size() == 1 && st.debt[0].type() == typeid(std::nullptr_t))
     return 4;
   else if (st.debt.size() == 1 && st.debt[0].type() == typeid(std::string))
     return std::any_cast<std::string>(st.debt[0]).length();
@@ -190,7 +190,8 @@ void Student::print_debt(const student_inf& st) {
     for (uint32_t i = 0; i < sp; i++) _out += " ";
   } else if (st.debt.size() > 1){
     _out = _out + std::to_string(st.debt.size()) + " items";
-    uint32_t sp = _student_size[3] - std::to_string(st.debt.size()).length() - 5;
+    uint32_t sp = _student_size[3]
+    sp -= std::to_string(st.debt.size()).length() - 5;
     for (uint32_t i = 0; i < sp; i++) _out += " ";
   }
   _out += ver + '\n';
@@ -221,7 +222,6 @@ void Student::parse_string(const std::string& str) {
   for (json::const_iterator it = j.at("items").cbegin();\
                             it != j.at("items").cend();\
                           ++it){
-
     from_json(it.value(), st);
     push_student(st);
     push_size(st);
@@ -275,7 +275,6 @@ void Student::print_table() {
     print_avg(_students[i]);
     print_debt(_students[i]);
     print_hor();
-
   }
   std::cout << _out;
 }
