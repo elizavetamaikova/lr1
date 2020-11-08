@@ -1,9 +1,7 @@
-//
-// Created by lizer on 04.10.2020.
-//
+// Copyright 2020 elizavetamaikova
+#ifndef INCLUDE_STUDENT_HPP_
+#define INCLUDE_STUDENT_HPP_
 
-#ifndef PARSER_STUDENT_HPP
-#define PARSER_STUDENT_HPP
 #include <vector>
 #include "serializer.hpp"
 #include <any>
