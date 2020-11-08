@@ -192,10 +192,10 @@ void Student::print_debt(const student_inf& st) {
     _out += debt;
     for (uint32_t i = 0; i < sp; i++) _out += " ";
   } else if (st.debt.size() > 1){
-    _out = _out + std::to_string(st.debt.size()) + " items";
-    uint32_t sp = _student_size[3]
+    _out = _out + std::to_string(st.debt.size()) + " items ";
+    uint32_t sp = _student_size[3];
     sp -= std::to_string(st.debt.size()).length() - 5;
-    for (uint32_t i = 0; i < sp; i++) _out += " ";
+    //for (uint32_t i = 0; i < sp; i++) _out += " ";
   }
   _out += ver + '\n';
 }
