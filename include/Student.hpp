@@ -49,5 +49,4 @@ class Student {
   uint32_t _student_size[4];
   std::string _out;
 };
-
-#endif  // PARSER_STUDENT_HPP
+#endif  // INCLUDE_STUDENT_HPP_
