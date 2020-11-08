@@ -1,5 +1,6 @@
-#ifndef PARSER_SERIALIZER_HPP
-#define PARSER_SERIALIZER_HPP
+// Copyright 2020 elizavetamaikova
+#ifndef INCLUDE_SERIALIZER_HPP_
+#define INCLUDE_SERIALIZER_HPP_
 
 #include <nlohmann/json.hpp>
 #include <any>
@@ -42,6 +43,5 @@ struct adl_serializer<std::any> {
     }
   }
 };
-}
-
-#endif  // PARSER_SERIALIZER_HPP
+}// namespace nlohmann
+#endif  // INCLUDE_SERIALIZER_HPP_
