@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.4)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-option(BUILD_COVERAGE "Build coverage" OFF)
+option(BUILD_COVERAGE "Build coverage" ON)
 
 set(
         HUNTER_CACHE_SERVERS
@@ -31,7 +31,6 @@ hunter_add_package(nlohmann_json)
 find_package(nlohmann_json 3.2.0 CONFIG REQUIRED)
 
 add_library(parser STATIC
-        # enum your files and delete this comment
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/Student.cpp
         )
 add_executable(tests

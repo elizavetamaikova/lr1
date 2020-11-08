@@ -1,3 +1,4 @@
+//Copyright 2020 elizavetamaikova
 #include <gtest/gtest.h>
 #include "Student.hpp"
 
@@ -100,7 +101,7 @@ st.parse_string(test_string);
 st.print_table();
 } catch (const std::runtime_error& e) {
 std::string expected = e.what();
-std::string ref_string = "Invalid _meta count";
+std::string ref_string = R"(Invalid _meta count)";
 EXPECT_EQ(expected, ref_string);
 }
 }
