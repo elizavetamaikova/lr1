@@ -36,7 +36,7 @@ Student::~Student() {
   _students.clear();
 }
 
-void Student::from_json(const json& j, student_inf& st) {
+void Student::from_json(const json& j, student_inf& st){
   get_name(j.at("name"), st);
   get_group(j.at("group"), st);
   get_avg(j.at("avg"), st);
@@ -48,13 +48,14 @@ void Student::get_name(const json& j, student_inf& st){
 }
 
 void Student::get_debt(const json& j, student_inf& st){
-  if (j.is_null())
+  if (j.is_null()){
     st.debt.push_back(nullptr);
-  else if (j.is_string())
+  }else if (j.is_string()){
     st.debt.push_back(j.get<std::string>());
-  else if (j.is_array())
+  }else if (j.is_array()){
     for (json::const_iterator it = j.cbegin(); it != j.cend(); ++it)
       st.debt.push_back(it->get<std::string>());
+  }
 }
 
 void Student::get_avg(const json& j, student_inf& st){
@@ -111,8 +112,10 @@ uint32_t Student::get_debt_length(const student_inf& st){
   else if (st.debt.size() == 1 && st.debt[0].type() == typeid(std::string))
     return std::any_cast<std::string>(st.debt[0]).length();
   else if (st.debt.size() == 0) return 0;
-  else return std::to_string(st.debt.size()).length() + 6;
+  else 
+    return std::to_string(st.debt.size()).length() + 6;
 }
+
 void Student::print_name(const student_inf& st){
   std::string ver = "|";
   std::string hor = "-";
