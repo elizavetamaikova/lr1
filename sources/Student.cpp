@@ -112,7 +112,7 @@ uint32_t Student::get_debt_length(const student_inf& st){
   else if (st.debt.size() == 1 && st.debt[0].type() == typeid(std::string))
     return std::any_cast<std::string>(st.debt[0]).length();
   else if (st.debt.size() == 0) return 0;
-  else 
+  else
     return std::to_string(st.debt.size()).length() + 6;
 }
 
