@@ -64,7 +64,7 @@ EXPECT_EQ(expected, ref_string);
 }
 
 
-TEST(String, InvalidString){
+TEST(String, Invalid_metacount){
 std::string test_string =\
 R"({
   "items": [
@@ -101,7 +101,7 @@ st.parse_string(test_string);
 st.print_table();
 } catch (std::runtime_error& e) {
 std::string expected = e.what();
-std::string ref_string = R"(Invalid _meta count)";
+std::string ref_string = "Invalid _meta count";
 EXPECT_EQ(expected, ref_string);
 }
 }
