@@ -40,9 +40,6 @@ add_executable(tests
 target_include_directories(parser
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
         )
-target_include_directories(tests
-        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
-        )
 
 target_link_libraries(parser nlohmann_json::nlohmann_json)
 
