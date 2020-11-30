@@ -3,7 +3,7 @@
 #include "Student.hpp"
 
 TEST(Parse, FromString){
-std::string test_string =\
+  std::string test_string =\
 R"({
   "items": [
     {
@@ -33,7 +33,7 @@ R"({
     "count": 3
   }
 })";
-std::string ref_string =\
+  std::string ref_string =\
 R"(| name          | group  | avg  | debt    |
 |---------------|--------|------|---------|
 | Ivanov Petr   | 1      | 4.25 | null    |
@@ -43,29 +43,29 @@ R"(| name          | group  | avg  | debt    |
 | Petrov Nikita | IU8-31 | 3.33 | 3 items |
 |---------------|--------|------|---------|
 )";
-Student st;
-st.parse_string(test_string);
-st.print_table();
-std::string expected = st.ret_string();
-EXPECT_EQ(expected, ref_string);
+  Student st;
+  st.parse_string(test_string);
+  st.print_table();
+  std::string expected = st.ret_string();
+  EXPECT_EQ(expected, ref_string);
 }
 
 TEST(Parse, FromFile){
-try {
-Student st;
-std::string path = "table.json";
-st.parse_file(path);
-st.print_table();
-} catch (const std::runtime_error& e) {
-std::string expected = e.what();
-std::string ref_string = "File error";
-EXPECT_EQ(expected, ref_string);
-}
+  try {
+    Student st;
+    std::string path = "table.json";
+    st.parse_file(path);
+    st.print_table();
+  } catch (const std::runtime_error& e) {
+    std::string expected = e.what();
+    std::string ref_string = "File error";
+    EXPECT_EQ(expected, ref_string);
+  }
 }
 
 
 TEST(String, Invalid_metacount){
-std::string test_string =\
+  std::string test_string =\
 R"({
   "items": [
     {
@@ -95,13 +95,13 @@ R"({
     "count": 2
   }
 })";
-try {
-Student st;
-st.parse_string(test_string);
-st.print_table();
-} catch (std::runtime_error& e) {
-std::string expected = e.what();
-std::string ref_string = "Invalid _meta count";
-EXPECT_EQ(expected, ref_string);
-}
+  try {
+    Student st;
+    st.parse_string(test_string);
+    st.print_table();
+  } catch (std::runtime_error& e) {
+    std::string expected = e.what();
+    std::string ref_string = "Invalid _meta count";
+    EXPECT_EQ(expected, ref_string);
+  }
 }
