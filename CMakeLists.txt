@@ -18,7 +18,7 @@ HunterGate(
         SHA1 "9a3594a61227967fb92159339ba326701b287b19"
 )
 
-project(parser)
+project(lab-01)
 #string(APPEND CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/GCC-9FIX.cmake")
 string(APPEND CMAKE_CXX_FLAGS " -pedantic -Werror -Wall -Wextra")
 string(APPEND CMAKE_CXX_FLAGS " -Wno-unused-command-line-argument")
