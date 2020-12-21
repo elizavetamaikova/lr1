@@ -302,6 +302,6 @@ std::string Student::ret_string() {
 
 std::ostream& operator<<(std::ostream &out, Student& _student) {
   _student.print_table();
-  out<<_student._out;
+  out << _student._out;
   return out;
 }
