@@ -2,23 +2,24 @@
 #include "Student.hpp"
 
 void Student::print_hor(){
+  uint32_t size_s = 2;
   std::string ver = "|";
   std::string hor = "-";
   _out += ver;
   for (uint32_t i = 0;
-       i < _student_size[0] + 2;
+       i < _student_size[0] + size_s;
        i++) _out += hor;
   _out += ver;
   for (uint32_t i = 0;
-       i < _student_size[1] + 2;
+       i < _student_size[1] + size_s;
        i++) _out += hor;
   _out += ver;
   for (uint32_t i = 0;
-       i < _student_size[2] + 2;
+       i < _student_size[2] + size_s;
        i++) _out += hor;
   _out += ver;
   for (uint32_t i = 0;
-       i < _student_size[3] + 2;
+       i < _student_size[3] + size_s;
        i++) _out += hor;
   _out += ver + '\n';
 }
@@ -92,6 +93,7 @@ uint32_t Student::get_group_length(const student_inf& st) {
 }
 
 uint32_t Student::get_avg_length(const student_inf& st){
+  uint32_t n = 0;
   if (st.avg.type() == typeid(int)) {
     return static_cast<uint32_t>(\
             std::to_string(std::any_cast<int>(st.avg)).length());
@@ -102,32 +104,37 @@ uint32_t Student::get_avg_length(const student_inf& st){
     return static_cast<uint32_t>(\
             std::any_cast<std::string>(st.avg).length());
   } else {
-    return 0;
+    return n;
   }
 }
 
 uint32_t Student::get_debt_length(const student_inf& st){
+  uint32_t nullptr_size = 4;
+  uint32_t null_size = 0;
+  uint32_t array_size = 6;
   if (st.debt.size() == 1 && st.debt[0].type() == typeid(std::nullptr_t))
-    return 4;
+    return nullptr_size;
   else if (st.debt.size() == 1 && st.debt[0].type() == typeid(std::string))
     return std::any_cast<std::string>(st.debt[0]).length();
-  else if (st.debt.size() == 0) return 0;
+  else if (st.debt.size() == 0) return null_size;
   else
-    return std::to_string(st.debt.size()).length() + 6;
+    return std::to_string(st.debt.size()).length() + array_size;
 }
 
 void Student::print_name(const student_inf& st){
+  uint32_t s_p = 1;
   std::string ver = "|";
   std::string hor = "-";
   _out += ver + " ";
   _out += st.name;
-  uint32_t sp = _student_size[0] - st.name.length() + 1;
+  uint32_t sp = _student_size[0] - st.name.length() + s_p;
   for (uint32_t i = 0;
        i < sp;
        i++) _out += " ";
 }
 
 void Student::print_group(const student_inf& st) {
+  uint32_t s_p = 1;
   std::string ver = "|";
   std::string hor = "-";
   _out += ver + " ";
@@ -135,7 +142,7 @@ void Student::print_group(const student_inf& st) {
   {
     _out += std::any_cast<std::string>(st.group);
     uint32_t sp = _student_size[1];
-    sp = sp - std::any_cast<std::string>(st.group).length() + 1;
+    sp = sp - std::any_cast<std::string>(st.group).length() + s_p;
     for (uint32_t i = 0;
          i < sp;
          i++) _out += " ";
@@ -143,12 +150,13 @@ void Student::print_group(const student_inf& st) {
     std::string group;
     group = std::to_string(std::any_cast<size_t>(st.group));
     _out += group;
-    uint32_t sp = _student_size[1] - group.length() + 1;
+    uint32_t sp = _student_size[1] - group.length() + s_p;
     for (uint32_t i = 0; i < sp; i++) _out += " ";
   }
 }
 
 void Student::print_avg(const student_inf& st) {
+  uint32_t s_p = 1;
   std::string ver = "|";
   std::string hor = "-";
   _out += ver + " ";
@@ -156,7 +164,7 @@ void Student::print_avg(const student_inf& st) {
   {
     _out += std::any_cast<std::string>(st.avg);
     uint32_t sp = _student_size[2];
-    sp = sp - std::any_cast<std::string>(st.avg).length() + 1;
+    sp = sp - std::any_cast<std::string>(st.avg).length() + s_p;
     for (uint32_t i = 0;
          i < sp;
          i++) _out += " ";
@@ -164,7 +172,7 @@ void Student::print_avg(const student_inf& st) {
     std::string avg;
     avg = std::to_string(std::any_cast<size_t>(st.avg));
     _out += avg;
-    uint32_t sp = _student_size[2] - avg.length() + 1;
+    uint32_t sp = _student_size[2] - avg.length() + s_p;
     for (uint32_t i = 0; i < sp; i++) _out += " ";
   } else if (st.avg.type() == typeid(double)) {
     std::ostringstream avg_pr;
@@ -173,29 +181,32 @@ void Student::print_avg(const student_inf& st) {
     avg_pr << std::any_cast<double>(st.avg);
     std::string avg = avg_pr.str();
     _out += avg;
-    uint32_t sp = _student_size[2] - avg.length() + 1;
+    uint32_t sp = _student_size[2] - avg.length() + s_p;
     for (uint32_t i = 0; i < sp; i++) _out += " ";
   }
 }
 
 void Student::print_debt(const student_inf& st) {
+  uint32_t s_p = 1;
+  uint32_t null_size = 3;
+  uint32_t s_p_items = 5;
   std::string ver = "|";
   std::string hor = "-";
   _out += ver + " ";
   if (st.debt.size() == 1 && st.debt[0].type() == typeid(nullptr)){
     _out += "null";
-    uint32_t sp = _student_size[3] - 3;
+    uint32_t sp = _student_size[3] - null_size;
     for (uint32_t i = 0; i < sp; i++) _out += " ";
   } else if (st.debt.size() == 1 && st.debt[0].type() == typeid(std::string)){
     std::string debt = std::any_cast<std::string>(st.debt[0]);
-    uint32_t sp = _student_size[3] - debt.length() + 1;
+    uint32_t sp = _student_size[3] - debt.length() + s_p;
     _out += debt;
     for (uint32_t i = 0; i < sp; i++) _out += " ";
   } else if (st.debt.size() > 1){
-    _out = _out + std::to_string(st.debt.size()) + " items ";
+    _out = _out + std::to_string(st.debt.size()) + " items";
     uint32_t sp = _student_size[3];
-    sp -= std::to_string(st.debt.size()).length() - 5;
-    //for (uint32_t i = 0; i < sp; i++) _out += " ";
+    sp = sp - std::to_string(st.debt.size()).length() - s_p_items;
+    for (uint32_t i = 0; i < sp; i++) _out += " ";
   }
   _out += ver + '\n';
 }
@@ -240,32 +251,36 @@ void Student::parse_file(const std::string& path) {
   std::string string;
   input_file >> string;
   input_file.close();
-  std::cout << string << std::endl;
+  //std::cout << string << std::endl;
   parse_string(string);
 }
 
 void Student::print_table() {
+  uint32_t n = 3;
+  uint32_t g = 4;
+  uint32_t a = 2;
+  uint32_t d = 3;
   std::string ver = "|";
   std::string hor = "-";
   _out += ver;
   _out += " name";
   for (uint32_t i = 0;
-       i < _student_size[0] - 3;
+       i < _student_size[0] - n;
        i++) _out += " ";
   _out += ver;
   _out += " group";
   for (uint32_t i = 0;
-       i < _student_size[1] - 4;
+       i < _student_size[1] - g;
        i++) _out += " ";
   _out += ver;
   _out += " avg";
   for (uint32_t i = 0;
-       i < _student_size[2] - 2;
+       i < _student_size[2] - a;
        i++) _out += " ";
   _out += ver;
   _out += " debt";
   for (uint32_t i = 0;
-       i < _student_size[3] - 3;
+       i < _student_size[3] - d;
        i++) _out += " ";
   _out = _out + ver + '\n';
   print_hor();
@@ -279,9 +294,14 @@ void Student::print_table() {
     print_debt(_students[i]);
     print_hor();
   }
-  std::cout << _out;
 }
 
 std::string Student::ret_string() {
   return _out;
+}
+
+std::ostream& operator<<(std::ostream &out, Student& _student) {
+  _student.print_table();
+  out<<_student._out;
+return out;
 }
