@@ -59,38 +59,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/135/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/137/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/135/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/137/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/lizer/Documents/labs cpp/lab-01-parser"
+CMAKE_SOURCE_DIR = /home/lizer/Documents/LAB/lab-01
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/lizer/Documents/LAB/lab-01/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/135/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/snap/clion/135/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
+	/snap/clion/137/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
 .PHONY : test
 
 # Special rule for the target test
@@ -101,7 +90,7 @@ test/fast: test
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/135/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/137/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -109,11 +98,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/snap/clion/137/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" "/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles /home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,6 +142,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named tests-gcov
+
+# Build rule for target.
+tests-gcov: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests-gcov
+.PHONY : tests-gcov
+
+# fast build rule for target.
+tests-gcov/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests-gcov.dir/build.make CMakeFiles/tests-gcov.dir/build
+.PHONY : tests-gcov/fast
+
+#=============================================================================
 # Target rules for targets named parser
 
 # Build rule for target.
@@ -166,6 +179,32 @@ tests: cmake_check_build_system
 tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
 .PHONY : tests/fast
+
+#=============================================================================
+# Target rules for targets named parser-gcov
+
+# Build rule for target.
+parser-gcov: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parser-gcov
+.PHONY : parser-gcov
+
+# fast build rule for target.
+parser-gcov/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parser-gcov.dir/build.make CMakeFiles/parser-gcov.dir/build
+.PHONY : parser-gcov/fast
+
+#=============================================================================
+# Target rules for targets named gcov
+
+# Build rule for target.
+gcov: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gcov
+.PHONY : gcov
+
+# fast build rule for target.
+gcov/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gcov.dir/build.make CMakeFiles/gcov.dir/build
+.PHONY : gcov/fast
 
 sources/Student.o: sources/Student.cpp.o
 
@@ -230,6 +269,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... gcov"
+	@echo "... parser-gcov"
+	@echo "... tests-gcov"
 	@echo "... parser"
 	@echo "... tests"
 	@echo "... sources/Student.o"

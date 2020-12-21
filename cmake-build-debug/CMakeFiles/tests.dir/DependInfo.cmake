@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lizer/Documents/labs cpp/lab-01-parser/tests/test.cpp" "/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/tests.dir/tests/test.cpp.o"
+  "/home/lizer/Documents/LAB/lab-01/tests/test.cpp" "/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles/tests.dir/tests/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,7 +16,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/parser.dir/DependInfo.cmake"
+  "/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles/parser.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

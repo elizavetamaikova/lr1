@@ -55,19 +55,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/135/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/137/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/135/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/137/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/lizer/Documents/labs cpp/lab-01-parser"
+CMAKE_SOURCE_DIR = /home/lizer/Documents/LAB/lab-01
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/lizer/Documents/LAB/lab-01/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -84,10 +84,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/tests-gcov.dir/clean
 clean: CMakeFiles/parser.dir/clean
 clean: CMakeFiles/tests.dir/clean
+clean: CMakeFiles/parser-gcov.dir/clean
+clean: CMakeFiles/gcov.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tests-gcov.dir
+
+# All Build rule for target.
+CMakeFiles/tests-gcov.dir/all: CMakeFiles/tests.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests-gcov.dir/build.make CMakeFiles/tests-gcov.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests-gcov.dir/build.make CMakeFiles/tests-gcov.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles --progress-num=6 "Built target tests-gcov"
+.PHONY : CMakeFiles/tests-gcov.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tests-gcov.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tests-gcov.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/tests-gcov.dir/rule
+
+# Convenience name for target.
+tests-gcov: CMakeFiles/tests-gcov.dir/rule
+
+.PHONY : tests-gcov
+
+# clean rule for target.
+CMakeFiles/tests-gcov.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests-gcov.dir/build.make CMakeFiles/tests-gcov.dir/clean
+.PHONY : CMakeFiles/tests-gcov.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/parser.dir
@@ -96,14 +126,14 @@ clean: CMakeFiles/tests.dir/clean
 CMakeFiles/parser.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parser.dir/build.make CMakeFiles/parser.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parser.dir/build.make CMakeFiles/parser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target parser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target parser"
 .PHONY : CMakeFiles/parser.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/parser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/parser.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/parser.dir/rule
 
 # Convenience name for target.
@@ -123,14 +153,14 @@ CMakeFiles/parser.dir/clean:
 CMakeFiles/tests.dir/all: CMakeFiles/parser.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" --progress-num=3,4 "Built target tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles --progress-num=4,5 "Built target tests"
 .PHONY : CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
@@ -142,6 +172,61 @@ tests: CMakeFiles/tests.dir/rule
 CMakeFiles/tests.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/clean
 .PHONY : CMakeFiles/tests.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/parser-gcov.dir
+
+# All Build rule for target.
+CMakeFiles/parser-gcov.dir/all: CMakeFiles/parser.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parser-gcov.dir/build.make CMakeFiles/parser-gcov.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parser-gcov.dir/build.make CMakeFiles/parser-gcov.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles --progress-num=3 "Built target parser-gcov"
+.PHONY : CMakeFiles/parser-gcov.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/parser-gcov.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/parser-gcov.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/parser-gcov.dir/rule
+
+# Convenience name for target.
+parser-gcov: CMakeFiles/parser-gcov.dir/rule
+
+.PHONY : parser-gcov
+
+# clean rule for target.
+CMakeFiles/parser-gcov.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parser-gcov.dir/build.make CMakeFiles/parser-gcov.dir/clean
+.PHONY : CMakeFiles/parser-gcov.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/gcov.dir
+
+# All Build rule for target.
+CMakeFiles/gcov.dir/all: CMakeFiles/parser-gcov.dir/all
+CMakeFiles/gcov.dir/all: CMakeFiles/tests-gcov.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gcov.dir/build.make CMakeFiles/gcov.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gcov.dir/build.make CMakeFiles/gcov.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles --progress-num= "Built target gcov"
+.PHONY : CMakeFiles/gcov.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/gcov.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gcov.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/gcov.dir/rule
+
+# Convenience name for target.
+gcov: CMakeFiles/gcov.dir/rule
+
+.PHONY : gcov
+
+# clean rule for target.
+CMakeFiles/gcov.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gcov.dir/build.make CMakeFiles/gcov.dir/clean
+.PHONY : CMakeFiles/gcov.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

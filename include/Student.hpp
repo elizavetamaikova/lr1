@@ -43,6 +43,7 @@ class Student {
   void print_table();
   void print_hor();
   std::string ret_string();
+  friend std::ostream& operator << (std::ostream &out, Student& _student);
 
  private:
   std::vector<student_inf> _students;

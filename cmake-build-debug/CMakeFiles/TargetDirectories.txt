@@ -1,5 +1,8 @@
-/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/parser.dir
-/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/test.dir
-/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/tests.dir
-/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles/test.dir
+/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles/tests-gcov.dir
+/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles/parser.dir
+/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles/tests.dir
+/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles/parser-gcov.dir
+/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles/gcov.dir

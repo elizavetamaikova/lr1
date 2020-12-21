@@ -45,7 +45,7 @@ R"(| name          | group  | avg  | debt    |
 )";
   Student st;
   st.parse_string(test_string);
-  st.print_table();
+  std::cout<<st;
   std::string expected = st.ret_string();
   EXPECT_EQ(expected, ref_string);
 }
@@ -55,7 +55,7 @@ TEST(Parse, FromFile){
     Student st;
     std::string path = "table.json";
     st.parse_file(path);
-    st.print_table();
+    std::cout<<st;
   } catch (const std::runtime_error& e) {
     std::string expected = e.what();
     std::string ref_string = "File error";
@@ -98,7 +98,7 @@ R"({
   try {
     Student st;
     st.parse_string(test_string);
-    st.print_table();
+    std::cout<<st;
   } catch (std::runtime_error& e) {
     std::string expected = e.what();
     std::string ref_string = "Invalid _meta count";

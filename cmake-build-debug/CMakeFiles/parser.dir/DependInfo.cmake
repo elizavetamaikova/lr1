@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lizer/Documents/labs cpp/lab-01-parser/sources/Student.cpp" "/home/lizer/Documents/labs cpp/lab-01-parser/cmake-build-debug/CMakeFiles/parser.dir/sources/Student.cpp.o"
+  "/home/lizer/Documents/LAB/lab-01/sources/Student.cpp" "/home/lizer/Documents/LAB/lab-01/cmake-build-debug/CMakeFiles/parser.dir/sources/Student.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

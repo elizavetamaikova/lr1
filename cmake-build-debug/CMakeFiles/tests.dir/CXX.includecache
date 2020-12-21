@@ -634,9 +634,9 @@ limits
 type_traits
 -
 
-/home/lizer/Documents/labs cpp/lab-01-parser/tests/test.cpp
+/home/lizer/Documents/LAB/lab-01/tests/test.cpp
 gtest/gtest.h
 -
 Student.hpp
-/home/lizer/Documents/labs cpp/lab-01-parser/tests/Student.hpp
+/home/lizer/Documents/LAB/lab-01/tests/Student.hpp
 
